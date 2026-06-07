@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Concept</title>
+    <title>Personal Trainers | Base Body Fitness</title>
     <link rel="stylesheet" href="../../css/personal-trainer-style.css">
     <link rel="stylesheet" href="../../css/style.css">
 </head>
@@ -13,9 +13,9 @@
 
     <nav class="navbar">
 
-        <div class="logo">
+        <a href="/" class="logo">
             Base Body Fitness
-        </div>
+        </a>
 
         <div class="nav-links">
 
@@ -50,14 +50,8 @@
 
     </nav>
 
-    <!DOCTYPE html>
-
-
-
-
     <div class="container">
 
-        ```
         <div class="section-title">
             <h1>Meet Our Personal Trainers</h1>
             <p>
@@ -192,13 +186,12 @@
             <div class="card">
                 <div class="image-wrap">
 
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43?auto=format&fit=crop&w=1200&q=80"
-                        alt="Trainer">
+                    <img src="/assets/images/garry-walker.png" alt="Trainer">
 
                     <div class="profile-panel">
                         <button class="close">✕</button>
 
-                        <h2>Personal Trainer 4</h2>
+                        <h2>Garry Walker</h2>
                         <div class="subtitle">Body Transformation Coach</div>
 
                         <p>Placeholder biography text.</p>
@@ -216,7 +209,7 @@
                 </div>
 
                 <div class="info">
-                    <h3>Personal Trainer 4</h3>
+                    <h3>Garry Walker</h3>
                     <div class="role">Transformation Coach</div>
                     <div class="specialties">Body Composition • Strength • Fitness</div>
                     <button class="profile-btn">View Profile</button>
@@ -227,14 +220,13 @@
             <div class="card">
                 <div class="image-wrap">
 
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43?auto=format&fit=crop&w=1200&q=80"
-                        alt="Trainer">
+                    <img src="/assets/images/jack-buckley.png" alt="Trainer">
 
                     <div class="profile-panel">
                         <button class="close">✕</button>
 
-                        <h2>Personal Trainer 5</h2>
-                        <div class="subtitle">Sports Performance Coach</div>
+                        <h2>Jack Buckley</h2>
+                        <div class="subtitle">Functional Fitness Coach</div>
 
                         <p>Placeholder biography text.</p>
                         <p>Additional profile information goes here.</p>
@@ -251,9 +243,9 @@
                 </div>
 
                 <div class="info">
-                    <h3>Personal Trainer 5</h3>
-                    <div class="role">Performance Coach</div>
-                    <div class="specialties">Athletic Development • Speed • Strength</div>
+                    <h3>Jack Buckley</h3>
+                    <div class="role">Functional Fitness Coach</div>
+                    <div class="specialties">Mobility • Conditioning • HIIT</div>
                     <button class="profile-btn">View Profile</button>
                 </div>
             </div>
@@ -262,13 +254,12 @@
             <div class="card">
                 <div class="image-wrap">
 
-                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43?auto=format&fit=crop&w=1200&q=80"
-                        alt="Trainer">
+                    <img src="/assets/images/mary-lou-heath.png" alt="Trainer">
 
                     <div class="profile-panel">
                         <button class="close">✕</button>
 
-                        <h2>Personal Trainer 6</h2>
+                        <h2>Mary Lou Heath</h2>
                         <div class="subtitle">General Fitness Coach</div>
 
                         <p>Placeholder biography text.</p>
@@ -286,53 +277,84 @@
                 </div>
 
                 <div class="info">
-                    <h3>Personal Trainer 6</h3>
-                    <div class="role">Fitness Coach</div>
+                    <h3>Mary Lou Heath</h3>
+                    <div class="role">General Fitness Coach</div>
+                    <div class="specialties">Health • Fitness • Lifestyle Coaching</div>
+                    <button class="profile-btn">View Profile</button>
+                </div>
+            </div>
+
+            <!-- Trainer 7 -->
+            <div class="card">
+                <div class="image-wrap">
+
+                    <img src="/assets/images/matt-simm.png" alt="Trainer">
+
+                    <div class="profile-panel">
+                        <button class="close">✕</button>
+
+                        <h2>Matt Simm</h2>
+                        <div class="subtitle">General Fitness Coach</div>
+
+                        <p>Placeholder biography text.</p>
+                        <p>Additional profile information goes here.</p>
+
+                        <div class="stats">
+                            <div class="stat"><strong>7+</strong>Years</div>
+                            <div class="stat"><strong>350+</strong>Clients</div>
+                            <div class="stat"><strong>Level 3</strong>Certified</div>
+                        </div>
+
+                        <button class="cta">Book Consultation</button>
+                    </div>
+
+                </div>
+
+                <div class="info">
+                    <h3>Matt Simm</h3>
+                    <div class="role">General Fitness Coach</div>
                     <div class="specialties">Health • Fitness • Lifestyle Coaching</div>
                     <button class="profile-btn">View Profile</button>
                 </div>
             </div>
 
         </div>
-        ```
 
-    </div>
+        <script>
 
-    <script>
+            const profileButtons = document.querySelectorAll('.profile-btn');
+            const closeButtons = document.querySelectorAll('.close');
 
-        const profileButtons = document.querySelectorAll('.profile-btn');
-        const closeButtons = document.querySelectorAll('.close');
+            profileButtons.forEach(button => {
 
-        profileButtons.forEach(button => {
+                button.addEventListener('click', () => {
 
-            button.addEventListener('click', () => {
+                    document
+                        .querySelectorAll('.profile-panel')
+                        .forEach(panel => panel.classList.remove('active'));
 
-                document
-                    .querySelectorAll('.profile-panel')
-                    .forEach(panel => panel.classList.remove('active'));
+                    button
+                        .closest('.card')
+                        .querySelector('.profile-panel')
+                        .classList.add('active');
 
-                button
-                    .closest('.card')
-                    .querySelector('.profile-panel')
-                    .classList.add('active');
-
-            });
-
-        });
-
-        closeButtons.forEach(button => {
-
-            button.addEventListener('click', () => {
-
-                button
-                    .closest('.profile-panel')
-                    .classList.remove('active');
+                });
 
             });
 
-        });
+            closeButtons.forEach(button => {
 
-    </script>
+                button.addEventListener('click', () => {
+
+                    button
+                        .closest('.profile-panel')
+                        .classList.remove('active');
+
+                });
+
+            });
+
+        </script>
 
 </body>
 

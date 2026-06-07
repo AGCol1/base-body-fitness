@@ -4,7 +4,7 @@ const observer = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
             entry.target.classList.add('show');
 
@@ -13,7 +13,7 @@ const observer = new IntersectionObserver(entries => {
     });
 
 }, {
-    threshold:0.15
+    threshold: 0.15
 });
 
 document.querySelectorAll('.section').forEach(section => {
@@ -30,6 +30,7 @@ document.querySelectorAll('.showcase').forEach(showcase => {
     const title = showcase.querySelector('.overlay-title');
     const text = showcase.querySelector('.overlay-text');
     const close = showcase.querySelector('.close-btn');
+    const link = showcase.querySelector('.overlay-link');
 
     showcase.querySelectorAll('.feature-btn').forEach(button => {
 
@@ -37,6 +38,11 @@ document.querySelectorAll('.showcase').forEach(showcase => {
 
             title.textContent = button.dataset.title;
             text.textContent = button.dataset.text;
+
+            if (link) {
+                link.href = button.dataset.link;
+                link.textContent = button.dataset.button;
+            }
 
             overlay.classList.add('active');
 

@@ -51,12 +51,14 @@
             .image-wrap {
                 position: relative;
                 height: 500px;
+                background: #000;
             }
 
             .image-wrap img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: contain;
+                object-position: center;
                 transition: .3s ease;
             }
 
@@ -201,6 +203,10 @@
 
                 .image-wrap {
                     height: 400px;
+                }
+
+                .section-title {
+                    margin-top: 70px;
                 }
 
                 .section-title h1 {
