@@ -58,26 +58,87 @@
             <h1>WE ARE<br><span class="accent">MORE THAN</span><br>JUST A GYM.</h1>
         </div>
 
-        <div class="scroll">↓</div>
+        <div class="scroll" id="scrollDown">
+            ↓
+        </div>
     </section>
 
-    <section class="section">
+    <section id="services" class="section">
         <div class="showcase">
 
             <div class="image-side">
 
-                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80"
-                    alt="Gym">
+                <img id="featureImage" src="assets/images/john-hamilton.png" alt="Service">
 
-                <div class="overlay">
+            </div>
+            <div class="buttons-side">
 
-                    <button class="close-btn">✕</button>
+                <div class="button-grid" id="buttonGrid">
 
-                    <h2 class="overlay-title"></h2>
+                    <button class="feature-btn" data-title="Train"
+                        data-text="Be pushed beyond your limits with our Personal Trainers."
+                        data-image="assets/images/image1.png" data-link="pages/services/personal-training.html"
+                        data-button="Meet Our Personal Trainers">
 
-                    <p class="overlay-text"></p>
+                        TRAIN
 
-                    <a href="#" class="overlay-link">
+                    </button>
+
+                    <button class="feature-btn" data-title="Recover"
+                        data-text="Let us assist you with your day to day aches and pains."
+                        data-image="assets/images/services/recover.jpg" data-link="pages/services/recover.html"
+                        data-button="Discover more about Recovery">
+
+
+                        RECOVER
+
+                    </button>
+
+                    <button class="feature-btn" data-title="Massage"
+                        data-text="Relax and unwind with our Therapeutic Massage Treatments."
+                        data-image="assets/images/services/massage.jpg" data-link="pages/services/massage.html"
+                        data-button="Discover more about Massages">
+
+                        MASSAGE
+
+                    </button>
+
+                    <button class="feature-btn" data-title="Beauty" data-text="Look good and feel amazing."
+                        data-image="assets/images/services/beauty.jpg" data-link="pages/services/beauty.html"
+                        data-button="Discover more about Beauty">
+
+                        BEAUTY
+
+                    </button>
+
+                    <button class="feature-btn" data-title="Food" data-text="Your healthy meal prep ready!"
+                        data-image="assets/images/services/food.jpg" data-link="pages/services/food.html"
+                        data-button="Discover more of our Services">
+                        FOOD
+
+                    </button>
+
+                    <button class="feature-btn" data-title="Sunbeds" data-text="Keep your tan all year round."
+                        data-image="assets/images/services/sunbeds.jpg" data-link="pages/services/sunbeds.html"
+                        data-button="Discover more about our Services">
+
+                        SUNBEDS
+
+                    </button>
+
+                </div>
+
+                <div class="feature-panel" id="featurePanel">
+
+                    <button class="feature-close" id="featureClose">
+                        ✕
+                    </button>
+
+                    <h2 id="featureTitle"></h2>
+
+                    <p id="featureText"></p>
+
+                    <a href="#" id="featureLink" class="overlay-link">
                         Find Out More
                     </a>
 
@@ -85,59 +146,38 @@
 
             </div>
 
-            <div class="buttons-side">
-
-                <button 
-                    class="feature-btn" 
-                    data-title="Train"
-                    data-text="Be pushed beyond your limits with our Personal Trainers."
-                    data-link="pages/services/personal-training.html#train"
-                    data-button="Meet Our Personal Trainers">
-
-                    TRAIN
-
-                </button>
-
-                <button class="feature-btn" data-title="Recover"
-                    data-text="Let us assist you with your day to day aches and pains.">
-                    RECOVER
-                </button>
-
-                <button class="feature-btn" data-title="Massage"
-                    data-text="Relax and unwind with our Therapeutic Massage Treatments.">
-                    MASSAGE
-                </button>
-
-                <button class="feature-btn" data-title="Beauty" data-text="Look good and feel amazing.">
-                    BEAUTY
-                </button>
-
-                <button class="feature-btn" data-title="Food" data-text="Your healthy meal prep ready!">
-                    FOOD
-                </button>
-
-                <button class="feature-btn" data-title="Sunbeds" data-text="Keep your tan all year round.">
-                    SUNBEDS
-                </button>
-
-            </div>
-
         </div>
+
     </section>
 
     <div class="banner"><span>WE ARE FAMILY</span></div>
 
     <section class="section">
-        <div class="showcase reverse">
-            <div class="image"
-                style="background-image:url('https://images.unsplash.com/photo-1534367610401-9f5ed68180aa?auto=format&fit=crop&w=1200&q=80')">
+
+        <div class="coverflow-carousel">
+
+            <div class="carousel-item prev-slide">
+                <img src="">
             </div>
-            <div class="content">
-                <button>Community</button><button>Support</button>
-                <button>Events</button><button>Results</button>
-                <button>Motivation</button><button>Progress</button>
+
+            <div class="carousel-item active-slide">
+                <img src="">
             </div>
+
+            <div class="carousel-item next-slide">
+                <img src="">
+            </div>
+
+            <button class="carousel-arrow left-arrow">
+                &#10094;
+            </button>
+
+            <button class="carousel-arrow right-arrow">
+                &#10095;
+            </button>
+
         </div>
+
     </section>
 
     <div class="banner"><span>WE ARE FITNESS</span></div>
@@ -197,10 +237,14 @@
                 <div class="price">£35<span>/month</span></div>
 
                 <ul>
-                    <li>ADD HERE</li>
-                    <li>ADD HERE</li>
-                    <li>ADD HERE</li>
-                    <li>ADD HERE</li>
+                    <li>Unlimited use of the Gym seven days a week</li>
+                    <li>Fitness classes</li>
+                    <li>Personalised fitness plans</li>
+                    <li>Help and support</li>
+                    <li>Free Friends Friday</li>
+                    <li>30 days cancellation notice</li>
+                    <li>Paid by Cash or Card</li>
+
                 </ul>
 
                 <a href="pages/join/index.html" class="membership-btn">
@@ -239,26 +283,6 @@
 
         </div>
 
-        </div>
-
-        <div class="day-pass">
-
-            <h3>Just Visiting?</h3>
-
-            <div class="day-pass-price">
-                £8 Day Pass
-            </div>
-
-            <p>
-                Enjoy full access to the gym for the day with no commitment.
-                Perfect for visitors, trial sessions or bringing a friend.
-            </p>
-
-            <a href="pages/join/index.html" class="day-pass-btn">
-                Get A Day Pass
-            </a>
-
-        </div>
         <div class="membership-card teen-card">
 
             <h3>TEEN</h3>
@@ -283,6 +307,25 @@
             <div class="membership-btn">
                 AT THE CLUB ONLY
             </div>
+
+        </div>
+
+        <div class="day-pass">
+
+            <h3>Just Visiting?</h3>
+
+            <div class="day-pass-price">
+                £8 Day Pass
+            </div>
+
+            <p>
+                Enjoy full access to the gym for the day with no commitment.
+                Perfect for visitors, trial sessions or bringing a friend.
+            </p>
+
+            <a href="pages/join/index.html" class="day-pass-btn">
+                Get A Day Pass
+            </a>
 
         </div>
 
