@@ -2,7 +2,7 @@
    PARKINSON'S CLUB PAGE
 ========================================== */
 
-.parkinsons-hero {
+.fff-hero {
     position: relative;
     height: 75vh;
     min-height: 600px;
@@ -12,7 +12,7 @@
     overflow: hidden;
 }
 
-.parkinsons-hero img {
+.fff-hero img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -78,12 +78,12 @@
 ========================================== */
 
 .benefits-grid {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 100px auto;
     padding: 0 20px;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
@@ -344,4 +344,119 @@
         font-size: 3rem;
     }
 
+}
+
+
+/* ==========================================
+   APPLICATION FORM
+========================================== */
+
+.application-section {
+    max-width: 1000px;
+    margin: 120px auto;
+    padding: 0 20px;
+}
+
+.application-form {
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.application-form input,
+.application-form textarea {
+    width: 100%;
+    padding: 18px 20px;
+
+    background: #141414;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+
+    color: #ffffff;
+    font-size: 1rem;
+
+    transition: 0.3s;
+}
+
+.application-form input:focus,
+.application-form textarea:focus {
+    outline: none;
+    border-color: #00d4c6;
+    box-shadow: 0 0 15px rgba(0, 212, 198, 0.2);
+}
+
+.application-form textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+.application-form input::placeholder,
+.application-form textarea::placeholder {
+    color: #888;
+}
+
+.application-form .membership-btn {
+    align-self: center;
+    margin-top: 10px;
+    min-width: 250px;
+}
+
+/* ==========================================
+   FORM HEADER
+========================================== */
+
+.membership-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.membership-header h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 15px;
+}
+
+.membership-header p {
+    color: #bcbcbc;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .application-form {
+        gap: 20px;
+    }
+
+    .application-form .membership-btn {
+        width: 100%;
+    }
+
+}
+
+.quote-section {
+    max-width: 1000px;
+    margin: 150px auto;
+    text-align: center;
+}
+
+.quote-section h2 {
+    font-size: 4rem;
+    line-height: 1.2;
 }
